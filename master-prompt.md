@@ -6,9 +6,9 @@ All Individual Prompts must reference this Master Prompt to ensure consistency a
 1. General Website Overview
 
     Website Name: Ven-Sec
-    Primary Purpose: [Briefly describe what the website does]
-    Target Audience: [Define user roles & who will use this site]
-    Monetization Strategy: [Subscription, one-time payment, free, etc.]
+    Primary Purpose: Ven Sec will allow Security companies to manage their clients, contracts, and employees, allowing real-time management of contracts, clients, worksites, employees, scheduling, and payroll.
+    Target Audience: Companies
+    Monetization Strategy: Subscription
     Key Technologies:
         Frontend: HTML5, CSS3, JavaScript (jQuery)
         Backend: PHP8, MySQL, API integrations
@@ -29,7 +29,7 @@ Notifications	In-app alerts, email & SMS	All Users	Toastr.js, notification table
 3. Folder & File Structure
 
 💾 All files must follow this structure to ensure consistency.
-🔹 Root Folder: /public_html/
+🔹 Root Folder: /home/$gd_user/
 
 📁 Main Directories:
 
@@ -42,17 +42,45 @@ Notifications	In-app alerts, email & SMS	All Users	Toastr.js, notification table
 
 📌 Example Folder Hierarchy:
 
-/public_html/
-  ├── assets/
-  │   ├── css/
-  │   ├── js/
-  │   ├── images/
+/home/$gd_user/
+
   ├── api/
+  ├── backups/
+  ├── config/
+  ├── cron_jobs/
   ├── database/
-  ├── functions/
-  ├── modules/
-  ├── templates/
-  ├── uploads/
+  ├── engine/
+  │   │   ├── functions/
+  ├── init/
+  ├── logs/
+  ├── private/
+  ├── public_html/
+  │   ├── admin/
+  │   │   ├── functions/
+  │   ├── assets/
+  │   │   ├── css/
+  │   │   ├── fonts/
+  │   │   ├── images/
+  │   │   │   ├── qr_codes/
+  │   │   ├── js/
+  │   ├── dashboards/
+  │   │   │   ├── client/
+  │   │   │   ├── company/
+  │   │   │   ├── hr/
+  │   │   │   ├── liaison/
+  │   │   │   ├── manager/
+  │   │   │   ├── officer/
+  │   │   │   ├── vs_admin/
+  │   ├── .htaccess
+  │   ├── conf_init.php/
+  │   ├── assets/
+  │   ├── assets/
+  │   ├── assets/
+  │   ├── modules/
+  │   ├── templates/
+  ├── site_conf/
+  ├── storage/
+  ├── vendor/
   ├── index.php
 
 📌 File Naming Conventions:
@@ -121,13 +149,13 @@ How to Use This Document
 
 📌 This Master Prompt should be used as a reference for all generated website sections.
 
-    Save this document in Google Docs, Notion, or a GitHub README.md file.
+    Save this document in a GitHub README.md file.
     When working on new features, copy & paste the Individual Prompt Template into a new chat.
     This ensures that every module stays aligned with the overall project.
 
 Final Steps:
 
-    Copy this formatted content into your Google Doc.
+    Copy this formatted content into your GitHub README.md.
     Save it as your official Master Prompt reference.
     Use it every time you generate an Individual Prompt for new sections of the website.
 
