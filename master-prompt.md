@@ -70,6 +70,9 @@ Notifications	In-app alerts, email & SMS	All Users	Toastr.js, notification table
   │   │   │   ├── liaison/
   │   │   │   ├── manager/
   │   │   │   ├── officer/
+  │   │   │   ├── regional_supervisor/
+  │   │   │   ├── site_supervisor/
+  │   │   │   ├── shift_supervisor/
   │   │   │   ├── vs_admin/
   │   ├── .htaccess
   │   ├── conf_init.php/
@@ -78,6 +81,7 @@ Notifications	In-app alerts, email & SMS	All Users	Toastr.js, notification table
   │   ├── assets/
   │   ├── modules/
   │   ├── templates/
+  ├── reports/
   ├── site_conf/
   ├── storage/
   ├── vendor/
