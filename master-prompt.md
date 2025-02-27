@@ -31,29 +31,60 @@ Notifications	In-app alerts, email & SMS	All Users	Toastr.js, notification table
 💾 All files must follow this structure to ensure consistency.
 🔹 Root Folder: /public_html/
 
+📌 Updated Folder & File Structure
+
+💾 All files must follow this structure to ensure consistency.
+🔹 Root Folder: home/$gd_user/
+
 📁 Main Directories:
 
-    assets/ → Stores images, fonts, CSS, and JavaScript.
-    functions/ → Stores reusable PHP functions.
-    api/ → Stores API endpoints.
-    database/ → Stores SQL scripts & backups.
-    uploads/ → Stores user-uploaded files.
-    sessions/ → Handles user sessions.
-
-📌 Example Folder Hierarchy:
-
-/public_html/
-  ├── assets/
-  │   ├── css/
-  │   ├── js/
-  │   ├── images/
+root/
   ├── api/
-  ├── database/
-  ├── functions/
-  ├── modules/
-  ├── templates/
-  ├── uploads/
-  ├── index.php
+  ├── backups/
+  ├── config/
+  ├── cron_jobs/
+  ├── database_backup/
+  ├── engine/
+  │   ├── db_functions/
+  │   ├── includes/
+  │   ├── 0_start.php
+  │   ├── 1_db_start.php
+  │   ├── load_engine.php
+  ├── init/
+  ├── logs/
+  │   ├── http_errors/
+  │   ├── code_errors/
+  ├── public_html/
+  │   ├── admin/
+  │   │   ├── functions/
+  │   ├── assets/
+  │   │   ├── css/
+  │   │   ├── fonts/
+  │   │   ├── images/
+  │   │   ├── js/
+  │   ├── dashboards/
+  │   │   ├── client/
+  │   │   ├── company/
+  │   │   ├── hr/
+  │   │   ├── liaison/
+  │   │   ├── officer/
+  │   │   ├── regional_supervisor/
+  │   │   ├── shift_supervisor/
+  │   │   ├── site_supervisor/
+  │   ├── dashboard.php
+  │   ├── error.php
+  │   ├── index.php
+  ├── sessions/
+  ├── site_conf/
+  ├── storage/
+  │   ├── qr_codes/
+  │   ├── reports/
+  │   ├── uploads/
+  ├── vendor/
+  ├── composer.json
+  ├── composer.lock
+
+Next Steps for You
 
 📌 File Naming Conventions:
 
