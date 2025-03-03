@@ -1,122 +1,118 @@
-📌 Master Prompt Template - Ven-Sec Development Framework
-🚀 Purpose:
+# 📌 Master Prompt Template - Ven-Sec Development Framework
 
-This document serves as the single source of truth for the website development project.
-All Individual Prompts must reference this Master Prompt to ensure consistency across all sections.
-1. General Website Overview
+---
+## 🚀 Purpose:
+This document serves as the **single source of truth** for the website development project.  
+All **Individual Prompts** must reference this Master Prompt to ensure **consistency across all sections**.
 
-    Website Name: Ven-Sec
-    Primary Purpose: Ven Sec will allow Security companies to manage their clients, contracts, and employees, allowing real-time management of contracts, clients, worksites, employees, scheduling, and payroll.
-    Target Audience: Companies
-    Monetization Strategy: Subscription
-    Key Technologies:
-        Frontend: HTML5, CSS3, JavaScript (jQuery)
-        Backend: PHP8, MySQL, API integrations
-        Security: Encryption, Multi-Factor Authentication (MFA)
-    Project Scope: [Define what will be built in version 1]
+---
 
-2. Core Features & Modules
+## **1. General Website Overview**
+- **Website Name**: Ven-Sec
+- **Primary Purpose**:  
+  Ven-Sec will allow Security companies to manage their clients, contracts, and employees,  
+  allowing real-time management of contracts, clients, worksites, employees, scheduling, and payroll.
+- **Target Audience**: Security companies, HR, officers, and clients.
+- **Monetization Strategy**: Subscription-based model.
+- **Key Technologies**:
+  - **Frontend**: HTML5, CSS3, JavaScript (jQuery)
+  - **Backend**: PHP8, MySQL, API integrations
+  - **Security**: Encryption, Multi-Factor Authentication (MFA)
+- **Project Scope**: Version 1 includes core modules for security company management.
 
-📌 Each module must align with the Master Prompt and integrate seamlessly into the website.
-Feature	Description	User Roles	Key Integrations
-User Authentication	Role-based access, session-based login	All Users	MySQL session storage
-Dashboard	Main UI layout, customizable cards	Admin, HR, Clients	AJAX, CSS themes
-QR Code Management	Generate & scan QR codes	Admin, Officers	GPS logging, scan logs
-Payroll Processing	Approve timesheets, ADP integration	HR, Employees	Payroll logs, ADP API
-Contracts & Bidding	Clients post jobs, companies bid	Clients, Companies	Notifications, contract logs
-Reports & Logging	Generate PDF reports, export logs	Admin, Supervisors	TCPDF, database logs
-Notifications	In-app alerts, email & SMS	All Users	Toastr.js, notification table
-3. Folder & File Structure
+---
 
-💾 All files must follow this structure to ensure consistency.
-🔹 Root Folder: /home/$gd_user/
+## **2. Core Features & Modules**
+📌 **Each module must align with the Master Prompt and integrate seamlessly into the website.**  
 
-📁 Main Directories:
+| Feature             | Description                            | User Roles                                                                                                   | Key Integrations              |
+| ------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ----------------------------- |
+| User Authentication | Role-based access, session-based login | All Users                                                                                                    | MySQL session storage         |
+| Dashboard           | Main UI layout, customizable cards     | **Admin, HR, Clients, Officers, Regional Supervisors, Site Supervisors, Shift Supervisors, Client Liaisons, Company Administrators** | AJAX, CSS themes              |
+| QR Code Management  | Generate & scan QR codes               | Admin, Officers, Supervisors                                                                                 | GPS logging, scan logs        |
+| Payroll Processing  | Approve timesheets, ADP integration    | HR, Regional Supervisors, Site Supervisors, Shift Supervisors, Officers, Company Administrators             | Payroll logs, ADP API         |
+| Contracts & Bidding | Clients post jobs, companies bid       | Clients, Company Administrators                                                                              | Notifications, contract logs  |
+| Reports & Logging   | Generate PDF reports, export logs      | Admin, Supervisors, HR                                                                                       | TCPDF, database logs          |
+| Notifications       | In-app alerts, email & SMS             | All Users                                                                                                    | Toastr.js, notification table |
+| Vehicle Maintenance | Track and manage vehicle maintenance   | Officers, Site Supervisors, HR, Company Administrators                                                       | Maintenance logs, scheduling  |
 
-    assets/ → Stores images, fonts, CSS, and JavaScript.
-    functions/ → Stores reusable PHP functions.
-    api/ → Stores API endpoints.
-    database/ → Stores SQL scripts & backups.
-    uploads/ → Stores user-uploaded files.
-    sessions/ → Handles user sessions.
+---
 
-📌 Example Folder Hierarchy:
+## **3. Folder & File Structure**
+💾 **All files must follow this structure to ensure consistency.**  
 
-/home/$gd_user/
+### 🔹 **Root Folder: `home/x8f5w8389tfu/`**
+| **Folder / File**       | **Description** |
+|-------------------------|----------------|
+| `root/`                | Main project root directory |
+| ├── `api/`             | API endpoints for external integrations |
+| ├── `backups/`         | Backup storage for database and files |
+| ├── `config/`          | Configuration files |
+| ├── `cron_jobs/`       | Scheduled task scripts |
+| ├── `database_backup/` | Backup of database dumps |
+| ├── `engine/`          | Core processing engine |
+| │ ├── `db_functions/`  | Database query functions |
+| │ ├── `includes/`      | Commonly included PHP files |
+| │ ├── `0_start.php`    | Initial boot script |
+| │ ├── `1_db_start.php` | Database connection initialization |
+| │ ├── `load_engine.php` | Loads core engine components |
+| ├── `init/`            | Initialization scripts |
+| ├── `logs/`            | System logs |
+| │ ├── `http_errors/`   | HTTP error logs |
+| │ ├── `code_errors/`   | Application error logs |
+| ├── `public_html/`     | Public web directory |
+| │ ├── `admin/`         | Admin-specific files |
+| │ │ ├── `functions/`   | Admin-related functions |
+| │ ├── `assets/`        | Static assets like CSS, JS, fonts, and images |
+| │ │ ├── `css/`         | Stylesheets |
+| │ │ ├── `fonts/`       | Font files |
+| │ │ ├── `images/`      | Image storage |
+| │ │ ├── `js/`          | JavaScript files |
+| │ ├── `dashboards/`    | User role-based dashboards |
+| │ │ ├── `client/`      | Client dashboard |
+| │ │ ├── `company/`     | Company dashboard |
+| │ │ ├── `hr/`          | HR dashboard |
+| │ │ ├── `liaison/`     | Client Liaison dashboard |
+| │ │ ├── `officer/`     | Security Officer dashboard |
+| │ │ ├── `regional_supervisor/` | Regional Supervisor dashboard |
+| │ │ ├── `shift_supervisor/` | Shift Supervisor dashboard |
+| │ │ ├── `site_supervisor/` | Site Supervisor dashboard |
+| │ ├── `dashboard.php`  | Main dashboard page |
+| │ ├── `error.php`      | Error page |
+| │ ├── `index.php`      | Website landing page |
+| ├── `sessions/`        | Session management files |
+| ├── `site_conf/`       | Site configuration settings |
+| ├── `storage/`         | Stored files |
+| │ ├── `qr_codes/`      | QR code image storage |
+| │ ├── `reports/`       | Generated reports |
+| │ ├── `uploads/`       | User uploads |
+| ├── `vendor/`          | Third-party dependencies (Composer packages) |
+| ├── `composer.json`    | Composer dependencies definition file |
+| ├── `composer.lock`    | Composer lock file to track exact dependency versions |
 
-  ├── api/
-  ├── backups/
-  ├── config/
-  ├── cron_jobs/
-  ├── database/
-  ├── engine/
-  │   │   ├── functions/
-  ├── init/
-  ├── logs/
-  ├── private/
-  ├── public_html/
-  │   ├── admin/
-  │   │   ├── functions/
-  │   ├── assets/
-  │   │   ├── css/
-  │   │   ├── fonts/
-  │   │   ├── images/
-  │   │   │   ├── qr_codes/
-  │   │   ├── js/
-  │   ├── dashboards/
-  │   │   │   ├── client/
-  │   │   │   ├── company/
-  │   │   │   ├── hr/
-  │   │   │   ├── liaison/
-  │   │   │   ├── manager/
-  │   │   │   ├── officer/
-  │   │   │   ├── regional_supervisor/
-  │   │   │   ├── site_supervisor/
-  │   │   │   ├── shift_supervisor/
-  │   │   │   ├── vs_admin/
-  │   ├── .htaccess
-  │   ├── conf_init.php/
-  │   ├── assets/
-  │   ├── assets/
-  │   ├── assets/
-  │   ├── modules/
-  │   ├── templates/
-  ├── reports/
-  ├── site_conf/
-  ├── storage/
-  ├── vendor/
-  ├── index.php
+---
 
-📌 File Naming Conventions:
+## **4. Database Schema**
+📌 **The full database schema is stored in [`database-schema.sql`](https://github.com/johns-vanilla-php/ven-sec/blob/main/database-schema.sql).**  
+For any changes to the database, refer to **the migration system** in `migrations/`.
 
-    CSS: screen_size.css, layout.css, theme.css
-    JavaScript: dashboard.js
-    PHP: dashboard.php, feature1.php, auth.php
+---
 
-4. Database Schema
+## **5. Role-Based Access Control (RBAC)**
+🔑 **Every module must follow role-based permissions.**
 
-📌 All modules must follow the defined database structure.
-Table Name	Purpose	Key Fields
-users	Stores user info	id, name, email, role, password_hash
-qr_scans	Logs QR code scans	id, user_id, qr_code_id, scan_time, location
-payroll_records	Stores payroll data	id, employee_id, hours_worked, pay_period, status
-contracts	Manages contract bidding	id, client_id, company_id, budget, status
-5. Role-Based Access Control (RBAC)
+| User Role | Access Level                 | Can Edit? | Can View? |
+|-----------|------------------------------|-----------|-----------|
+| Admin     | Full access                  | ✅        | ✅        |
+| HR        | Payroll, employee management | ✅        | ✅        |
+| Clients   | Contracts, invoices          | ❌        | ✅        |
+| Employees | View pay stubs, schedules    | ❌        | ✅        |
 
-🔑 Every module must follow role-based permissions.
-User Role	Access Level	Can Edit?	Can View?
-Admin	Full access	✅	✅
-HR	Payroll, employee management	✅	✅
-Clients	Contracts, invoices	❌	✅
-Employees	View pay stubs, schedules	❌	✅
-6. Integration & Communication Between Sections
+---
 
-🛠 Every module must integrate with the website’s core systems.
-
-    AJAX-based dynamic content loading
-    Standardized UI components
-    Consistent database relationships
-    Cross-module interaction (e.g., Payroll pulls from Shift Reports)
+## **6. Generating Individual Prompts**
+🔹 **How to reference this Master Prompt when creating a new chat:**  
+When generating a specific module, use this format:
 
 7. UI/UX Design Standards
 
