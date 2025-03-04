@@ -75,12 +75,18 @@ Notifications	In-app alerts, email & SMS	All Users	Toastr.js, notification table
   │   │   │   ├── shift_supervisor/
   │   │   │   ├── vs_admin/
   │   ├── .htaccess
-  │   ├── conf_init.php/
+  │   ├── conf_init.php
   │   ├── assets/
   │   ├── assets/
   │   ├── assets/
   │   ├── modules/
   │   ├── templates/
+  │   ├── index.php
+  │   ├── login.php
+  │   ├── logout.php
+  │   ├── timeout.php
+  │   ├── session_auth.php
+  │   ├── error.php
   ├── reports/
   ├── site_conf/
   ├── storage/
