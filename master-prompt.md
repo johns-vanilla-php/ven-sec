@@ -132,80 +132,14 @@ Employees	View pay stubs, schedules	❌	✅
     ADA Compliance: High-contrast mode, keyboard navigation, larger fonts.
     Customizable Themes: Users can choose from predefined themes.
 
-8. PHP Script Comment Block Standard
+8. ## Standardized PHP Script Comment Block
 
-Whenever generating a new PHP script, include the following standard comment block at the top of the file.
+To maintain consistency, all PHP scripts must include the standardized comment block stored in the following GitHub file:
 
-    Manually Updated Fields:
-        Created Version (@*version=...*@) remains manually updated.
-        Created On (@*created=...*@) stays the same after creation.
-    Automatically Updated Fields:
-        Last Modified updates whenever the script is edited.
-        Module Version (@*moduleversion=...*@) follows semantic versioning:
-            Major updates (new features, structure changes) → X.0.0 → X.1.0
-            Minor updates (bug fixes, small enhancements) → X.X.0 → X.X.1
-        @*changelog=...*@ logs only the latest update.
-        Full changelog history is maintained in descending order.
+🔗 **[PHP Comment Block Template](https://github.com/johns-vanilla-php/ven-sec/blob/main/php-comment-block.md)**
 
-PHP Comment Block Template:
+**Instructions for ChatGPT:**  
+- Always use the **latest version** of the comment block from GitHub.  
+- Replace placeholders (`[[placeholders]]`) with actual script details.  
+- Ensure the comment block appears at the **very top** of every new PHP script.  
 
-<?php
-/*//////////////////////////////////////////////////////////////////////////////////////////////////
-
-Authors:          John Stuttler
-Created On:       [[created_date]]
-Created Version:  1.0.0  <!-- This remains manually updated -->
-Last Modified:    [[modified_date]]
-Module:           [[module_name]]
-Module Version:   [[module_version]]
-
-Changelog:
-[[changelog_history]]
-
-*///////////////////////////////////////////////////////////////////////////////////////////////////
-/**
- @*needs_reviewed=yes*@
- @*authors=John Stuttler*@
- @*created=[[created_date]]*@
- @*modified=[[modified_date]]*@
- @*version=1.0.0*@  <!-- This remains manually updated -->
- @*module=[[module_name]]*@
- @*moduleversion=[[module_version]]*@
- @*changelog=[[latest_changelog_entry]]*@
- @*needs_reviewed=yes*@
- @*databases=vs_db*@
- @*tables=[[tables]]*@
- @*actions=[[actions]]*@
- @*variables=[[query_variables]]*@
- @*globals=[[global_variables]]*@
- @*see_also=*@
-<div>
-  <table class="commentTable">
-    <tr>
-      <td class="commentCell">
-        <p>
-          [[script_purpose]]
-        </p>
-      </td>
-    </tr>
-  </table>
-</div>
- */
-
-3. Questions to Ask Before Generating a PHP Script
-
-Before generating a PHP script, always ask the following questions:
-
-    What is the Module Name? (Replaces [[module_name]])
-    What Global Variables are required? (Replaces [[global_variables]])
-    What is the purpose of this script? (Replaces [[script_purpose]])
-    Does this script contain database queries?
-        If yes, determine:
-            Which tables are queried? (Replaces [[tables]])
-            What query types are used? (Insert, Update, Select, etc.) (Replaces [[actions]])
-            What query variables are used? (Replaces [[query_variables]])
-                Example:
-
-string $is_active (Optional - 'yes' or 'no')
-,float $price_each (Default - 0.00)
-,int $quantity (Default - 0)
