@@ -101,7 +101,7 @@ Notifications	In-app alerts, email & SMS	All Users	Toastr.js, notification table
 
 4. Database Schema
 
-📌 All modules must follow the defined database structure.
+📌 All modules must follow the defined database structure.  Do not add constraints or foreign keys.
 Table Name	Purpose	Key Fields
 users	Stores user info	id, name, email, role, password_hash
 qr_scans	Logs QR code scans	id, user_id, qr_code_id, scan_time, location
