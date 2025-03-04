@@ -132,41 +132,80 @@ Employees	View pay stubs, schedules	❌	✅
     ADA Compliance: High-contrast mode, keyboard navigation, larger fonts.
     Customizable Themes: Users can choose from predefined themes.
 
-8. Generating Individual Prompts
+8. PHP Script Comment Block Standard
 
-🔹 How to reference this Master Prompt when creating a new chat:
-When generating a specific module, use this format:
+Whenever generating a new PHP script, include the following standard comment block at the top of the file.
 
-Referencing my **Master Prompt: Website Development Framework for Ven-Sec**, generate a detailed implementation for the [Feature Name] module.
+    Manually Updated Fields:
+        Created Version (@*version=...*@) remains manually updated.
+        Created On (@*created=...*@) stays the same after creation.
+    Automatically Updated Fields:
+        Last Modified updates whenever the script is edited.
+        Module Version (@*moduleversion=...*@) follows semantic versioning:
+            Major updates (new features, structure changes) → X.0.0 → X.1.0
+            Minor updates (bug fixes, small enhancements) → X.X.0 → X.X.1
+        @*changelog=...*@ logs only the latest update.
+        Full changelog history is maintained in descending order.
 
-### **Key Details**:
-- Ensure it integrates with [Mention Other Modules].
-- Role-based access: [Specify roles & permissions].
-- Uses database table: [Table name].
-- Follows folder structure & UI layout as defined in the Master Prompt.
+PHP Comment Block Template:
 
-Example: Individual Prompt for Payroll Module
+<?php
+/*//////////////////////////////////////////////////////////////////////////////////////////////////
 
-Referencing my **Master Prompt: Website Development Framework for Ven-Sec**, generate a detailed implementation for the **Payroll Processing Module**.
+Authors:          John Stuttler
+Created On:       [[created_date]]
+Created Version:  1.0.0  <!-- This remains manually updated -->
+Last Modified:    [[modified_date]]
+Module:           [[module_name]]
+Module Version:   [[module_version]]
 
-### Key Details:
-- Ensure it integrates with the **Shift Report Module** for worked hours.
-- Role-based access: **HR/Admin can edit, Employees can view, Clients have no access**.
-- Uses the database table **payroll_records** as defined in the Master Prompt.
-- Follows the same **folder structure** and UI layout standards.
+Changelog:
+[[changelog_history]]
 
-How to Use This Document
+*///////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ @*needs_reviewed=yes*@
+ @*authors=John Stuttler*@
+ @*created=[[created_date]]*@
+ @*modified=[[modified_date]]*@
+ @*version=1.0.0*@  <!-- This remains manually updated -->
+ @*module=[[module_name]]*@
+ @*moduleversion=[[module_version]]*@
+ @*changelog=[[latest_changelog_entry]]*@
+ @*needs_reviewed=yes*@
+ @*databases=vs_db*@
+ @*tables=[[tables]]*@
+ @*actions=[[actions]]*@
+ @*variables=[[query_variables]]*@
+ @*globals=[[global_variables]]*@
+ @*see_also=*@
+<div>
+  <table class="commentTable">
+    <tr>
+      <td class="commentCell">
+        <p>
+          [[script_purpose]]
+        </p>
+      </td>
+    </tr>
+  </table>
+</div>
+ */
 
-📌 This Master Prompt should be used as a reference for all generated website sections.
+3. Questions to Ask Before Generating a PHP Script
 
-    Save this document in a GitHub README.md file.
-    When working on new features, copy & paste the Individual Prompt Template into a new chat.
-    This ensures that every module stays aligned with the overall project.
+Before generating a PHP script, always ask the following questions:
 
-Final Steps:
+    What is the Module Name? (Replaces [[module_name]])
+    What Global Variables are required? (Replaces [[global_variables]])
+    What is the purpose of this script? (Replaces [[script_purpose]])
+    Does this script contain database queries?
+        If yes, determine:
+            Which tables are queried? (Replaces [[tables]])
+            What query types are used? (Insert, Update, Select, etc.) (Replaces [[actions]])
+            What query variables are used? (Replaces [[query_variables]])
+                Example:
 
-    Copy this formatted content into your GitHub README.md.
-    Save it as your official Master Prompt reference.
-    Use it every time you generate an Individual Prompt for new sections of the website.
-
-Now you’re ready to generate structured website components while keeping everything consistent! 🚀 Let me know if you need adjustments.
+string $is_active (Optional - 'yes' or 'no')
+,float $price_each (Default - 0.00)
+,int $quantity (Default - 0)
